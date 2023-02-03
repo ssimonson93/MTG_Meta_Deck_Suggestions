@@ -1,1 +1,3 @@
-# MTG_Meta_Deck_Suggestions
+# MTG Meta Deck Suggestions
+
+In this project, the most effective decks used in recent months in the trading card game Magic The Gathering, are scraped from the website MTGtop8.com and manipulated to ultimately give a user suggestions on decks they could create with cards they have available to them.  Python code was used to manipulate the deck data into individual cards, and Kmeans functions were used to plot this data in clusters to better identify relationships between decks and the cards therein.  The decks were then also converted into json files for use with the cards.js javascript file, which can be used in the project.html display on a live server to narrow down decklists into suggestions for the user based on their card inputs.
