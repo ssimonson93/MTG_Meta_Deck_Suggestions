@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Recommending Card Substitutions Based on Tournament Meta</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Recommending Possible Decklists Based on Tournament Meta</h1>
+        <p>Choose your cards from the dropdown menu and click "Add" to add them.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="well">
+          <h5>Modern Cards</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset"></select>
+          <button type="button" btn="btn-primary" onclick="addCard()">Add Card</button>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Your Deck</h3>
+          </div>
+          <div id="cardList" class="panel-body"></div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Suggested Decklists</h3>
+          </div>
+          <div id="deckList" class="panel-body"></div>
+          <button type="button" btn="btn-primary" onclick="deckListMaker()">Links</button>
+
+        </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <h5>Standard Cards</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDatasetTwo"></select>
+          <button type="button" btn="btn-primary" onclick="addCardTwo()">Add Card</button>
+        </div>  
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Your Deck</h3>
+          </div>
+          <div id="cardListTwo" class="panel-body"></div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Suggested Decklists</h3>
+          </div>
+            <div id="deckListTwo" class="panel-body"></div>
+            <button type="button" btn="btn-primary" onclick="deckListMakerTwo()">Links</button>
+
+        </div>  
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <h5>Historic Cards</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDatasetThree"></select>
+          <button type="button" btn="btn-primary" onclick="addCardThree()">Add Card</button>
+        </div> 
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Your Deck</h3>
+          </div>
+          <div id="cardListThree" class="panel-body"></div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Suggested Decklists</h3>
+          </div>
+          <div id="deckListThree" class="panel-body"></div>
+          <button type="button" btn="btn-primary" onclick="deckListMakerThree()">Links</button>
+        </div> 
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <h5>Legacy Cards</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDatasetFour"></select>
+          <button type="button" btn="btn-primary" onclick="addCardFour()">Add Card</button>
+        </div>  
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Your Deck</h3>
+          </div>
+          <div id="cardListFour" class="panel-body"></div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Suggested Decklists</h3>
+          </div>
+          <div id="deckListFour" class="panel-body"></div>
+          <button type="button" btn="btn-primary" onclick="deckListMakerFour()">Links</button>
+        </div> 
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <h5>Pauper Cards</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDatasetFive"></select>
+          <button type="button" btn="btn-primary" onclick="addCardFive()">Add Card</button>
+        </div>  
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Your Deck</h3>
+          </div>
+          <div id="cardListFive" class="panel-body"></div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Suggested Decklists</h3>
+          </div>
+          <div id="deckListFive" class="panel-body"></div>
+          <button type="button" btn="btn-primary" onclick="deckListMakerFive()">Links</button>
+        </div> 
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <h5>Pioneer Cards</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDatasetSix"></select>
+          <button type="button" btn="btn-primary" onclick="addCardSix()">Add Card</button>
+        </div>  
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Your Deck</h3>
+          </div>
+          <div id="cardListSix" class="panel-body"></div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Suggested Decklists</h3>
+          </div>
+          <div id="deckListSix" class="panel-body"></div>
+          <button type="button" btn="btn-primary" onclick="deckListMakerSix()">Links</button>
+        </div> 
+
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <h5>Vintage Cards</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDatasetSeven"></select>
+          <button type="button" btn="btn-primary" onclick="addCardSeven()">Add Card</button>
+        </div>  
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Your Deck</h3>
+          </div>
+          <div id="cardListSeven" class="panel-body"></div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Suggested Decklists</h3>
+          </div>
+          <div id="deckListSeven" class="panel-body"></div>
+          <button type="button" btn="btn-primary" onclick="deckListMakerSeven()">Links</button>
+        </div> 
+
+
+
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="cards.js"></script>
+
+</body>
+
+</html>
